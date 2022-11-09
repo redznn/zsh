@@ -16,7 +16,7 @@ zsh
 # Instalar Oh-my-zsh! -> https://ohmyz.sh/
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# Instalar Racotechnic
+# Instalar racotecnic
 curl -L https://github.com/elboletaire/zsh-theme-racotecnic/raw/master/racotecnic.zsh-theme > ~/.oh-my-zsh/themes/racotecnic.zsh-theme
 
 # Mudar ~/.zshrc -> ZSH_THEME="racotecnic"
