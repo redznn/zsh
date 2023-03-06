@@ -33,4 +33,18 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # Mudar plugins
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+echo "Você quer colocar os plugins em .zshrc, certo? Você quer colocar o comando no final de .zshrc ou em uma linha específica? (digite 'end' ou 'line')"
+read escolha
+
+if [[ "$escolha" == "end" ]]; then
+  echo "plugins=(git zsh-autosuggestions zsh-syntax-highlighting)" >> ~/.zshrc
+  echo "A linha foi adicionada a linha final de .zshrc"
+elif [[ "$escolha" == "line" ]]; then
+  echo "Digite o número da linha para adicionar a linha antes:"
+  read numero_linha
+  sed -i "${numero_linha}iplugins=(git zsh-autosuggestions zsh-syntax-highlighting)" ~/.zshrc
+  echo "A linha foi adicionada à linha $numero_linha do arquivo .zshrc."
+else
+  echo "Opção inválida. Digite 'end' ou 'line'."
+fi
+
