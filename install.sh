@@ -1,28 +1,21 @@
 #!/bin/bash
 
 # Executar comandos a seguir para atualizar os pacotes
-sudo apt update -y
-
-# Instalar pacotes a seguir
-sudo apt install git curl build-essential dkms perl wget -y
-sudo apt install gcc make default-libmysqlclient-dev libssl-dev -y
-sudo apt install -y zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev llvm \
-  libncurses5-dev libncursesw5-dev \
-  xz-utils tk-dev libffi-dev liblzma-dev python3-openssl git
+pacman -S zsh
 
 # Instalar e configurar ZSH
-sudo apt install zsh -y
+pacman -S zsh
 chsh -s /bin/zsh
 source ~/.zshrc
 
 # Instalar Oh-my-zsh! -> https://ohmyz.sh/
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# Instalar racotecnic
-curl -L https://github.com/elboletaire/zsh-theme-racotecnic/raw/master/racotecnic.zsh-theme > ~/.oh-my-zsh/themes/racotecnic.zsh-theme
+# Instalar Powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-# Mudar ~/.zshrc -> ZSH_THEME="racotecnic"
-sed -i 's/ZSH_THEME=".*/ZSH_THEME="racotecnic"/g' ~/.zshrc
+# Mudar ~/.zshrc -> ZSH_THEME="powerlevel10k/powerlevel10k"
+sed -i 's/ZSH_THEME=".*/ZSH_THEME="powerlevel10k/powerlevel10k"/g' ~/.zshrc
 
 # Instalar Zsh Autosuggestions
 # https://github.com/zsh-users/zsh-autosuggestions
