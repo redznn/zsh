@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Executar comandos a seguir para atualizar os pacotes
-pacman -S zsh
+sudo pacman -S zsh
 
 # Instalar e configurar ZSH
-pacman -S zsh
+sudo pacman -S zsh
 chsh -s /bin/zsh
 source ~/.zshrc
 
