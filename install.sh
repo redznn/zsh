@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Executar comandos a seguir para atualizar os pacotes
-sudo pacman -S zsh
-
 # Instalar e configurar ZSH
 sudo pacman -S zsh
 chsh -s /bin/zsh
 source ~/.zshrc
+
+# Removendo configurações antigas do oh my zsh se existir
+rm -rf ~/.oh-my-zsh
 
 # Instalar Oh-my-zsh! -> https://ohmyz.sh/
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
