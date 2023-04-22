@@ -2,7 +2,6 @@
 
 # Instalar e configurar ZSH
 sudo pacman -S zsh --noconfirm
-chsh -s /bin/zsh
 
 # Removendo configurações antigas do oh my zsh se existir
 rm -rf ~/.oh-my-zsh
@@ -27,4 +26,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 # Mudar plugins
 sed -i 's/^plugins=(/plugins=(virtualenv git zsh-autosuggestions zsh-syntax-highlighting /g' ~/.zshrc
+
+# Mudar shell padrão
+chsh -s /bin/zsh
 
