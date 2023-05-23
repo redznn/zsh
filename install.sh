@@ -2,8 +2,8 @@
 
 # Instalar e configurar ZSH
 sudo pacman -S zsh --noconfirm
-chsh -s /bin/zsh
 sleep 5
+chsh -s /bin/zsh
 
 # Removendo configurações antigas do oh my zsh se existir
 rm -rf ~/.oh-my-zsh
