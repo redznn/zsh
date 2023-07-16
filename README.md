@@ -1,5 +1,5 @@
 # Resumo do script:
-* Só funciona no Arch Linux/ Distros baseadas nele
+* Só funciona no Ubuntu/Debian/ Distros baseadas nele
 * ZSH
 * Oh My zsh
 * BiraTime
@@ -7,5 +7,5 @@
 
 # Como usar:
 ```
-curl https://raw.githubusercontent.com/redznn/zsh/master/install.sh |bash
+curl https://raw.githubusercontent.com/redznn/zsh/ubuntu/install.sh |bash
 ```

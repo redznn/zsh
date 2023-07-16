@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Instalar e configurar ZSH
-sudo pacman -S zsh --noconfirm
+sudo apt-get install zsh -y
 chsh -s /bin/zsh
 
 # Removendo configurações antigas do oh my zsh se existir
